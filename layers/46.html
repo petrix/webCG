@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Preview: NewsCG5</title>
+        <title>Preview: NewsCG7</title>
 		
 		<meta charset="utf-8">
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
@@ -29,7 +29,8 @@
 <link rel="stylesheet" href="http://10.0.1.6/webcg/assets/fonts/stylesheet_bender.css";>
 <link rel="stylesheet" href="http://10.0.1.6/webcg/assets/fonts/stylesheet_comfortaa.css";>
 <link href="http://10.0.1.6/webcg/assets/animate.css" rel="stylesheet";>
-<link href="http://10.0.1.6/webcg/assets/vivify.css" rel="stylesheet";>
+<link href="http://10.0.1.6/webcg/assets/vivify.css" rel="stylesheet" type="text/css"/>
+
 
 <style>
 #lowerthird{
@@ -52,9 +53,9 @@ font-family: 'Uni Sans';
 	height:125px;
 	
       background: rgba(255,255,255,0.9);
-background: -moz-linear-gradient(left, rgba(255,255,255,0.9) 30%, rgba(0,0,0,0.0) 60%);
-background: -webkit-linear-gradient(left, rgba(255,255,255,0.9) 30%, rgba(0,0,0,0.0) 60%);
-background: linear-gradient(to right, rgba(255,255,255,0.9) 30%, rgba(0,0,0,0.0) 60%);
+background: -moz-linear-gradient(left, rgba(255,255,255,0.9) 40%, rgba(0,0,0,0.0) 70%);
+background: -webkit-linear-gradient(left, rgba(255,255,255,0.9) 40%, rgba(0,0,0,0.0) 70%);
+background: linear-gradient(to right, rgba(255,255,255,0.9) 40%, rgba(0,0,0,0.0) 70%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255,255,255,0.9)', endColorstr='rgba(0,0,0,0.0)',GradientType=1 );
                                                           
 }	
@@ -92,15 +93,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255,255,
 #ticker div {
     display: inline-block;
     word-wrap: break-word;
-}
-		
+}		
 		</style>
     </head>	
 	<body>
-		 <div id="lowerthird" class="animated fadeInLeft">
+		 <div id="lowerthird" class="vivify fadeInLeft">
     <div id="bg">
-    	<div id="f0" class="animated fadeInDown delay-1000" placeholder="Main Title">Alexey</div>
-    	<div id="f1" class="animated fadeInUp delay-1250" placeholder="Secondary Title">Balakirev</div>
+        
+    	<div id="f0" class="vivify fadeInDown delay-1000" ceholder="Secondary Title">Alexey Balakirev</div>
+    	<div id="f1" class="vivify fadeInUp delay-1250" placeholder="Secondary Title">Lead Graphics artist</div>
     </div>
     <div id="ticker">
         <strong>Latest News:</strong>
@@ -138,6 +139,9 @@ $(document).ready(function() {
 });
 
 $("#ticker").ticker();
-</script>		
+</script>
+
+  
+		
 	</body>
 </html>
