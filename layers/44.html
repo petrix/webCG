@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Preview: NewsCG5</title>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>
+		
+		<style>
+			* {
+				-webkit-box-sizing: border-box;
+				Box-Sizing:border-box;
+				-webkit-backface-visibility: hidden;
+				-webkit-transition: translate3d(0,0,0);
+			}
+			html, body {
+				width: 1920px;
+				height: 1080px;
+				margin: 0; 
+				padding: 0; 
+				background: transparent;
+				overflow: hidden;
+				-webkit-font-smoothing: antialiased !important;
+			}
+			@font-face {
+    font-family: 'Uni Sans';
+    src: url('http://10.0.1.6/webcg/assets/fonts/UniSansRegular.eot');
+    src: local('Uni Sans Regular'), local('UniSansRegular'),
+        url('http://10.0.1.6/webcg/assets/fonts/UniSansRegular.eot?#iefix') format('embedded-opentype'),
+        url('http://10.0.1.6/webcg/assets/fonts/UniSansRegular.woff2') format('woff2'),
+        url('http://10.0.1.6/webcg/assets/fonts/UniSansRegular.woff') format('woff'),
+        url('http://10.0.1.6/webcg/assets/fonts/UniSansRegular.ttf') format('truetype'),
+        url('http://10.0.1.6/webcg/assets/fonts/UniSansRegular.svg#UniSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bender';
+    src: url('http://10.0.1.6/webcg/assets/fonts/Bender-Bold.eot');
+    src: local('Bender Bold'), local('Bender-Bold'),
+        url('http://10.0.1.6/webcg/assets/fonts/Bender-Bold.eot?#iefix') format('embedded-opentype'),
+        url('http://10.0.1.6/webcg/assets/fonts/Bender-Bold.woff2') format('woff2'),
+        url('http://10.0.1.6/webcg/assets/fonts/Bender-Bold.woff') format('woff'),
+        url('http://10.0.1.6/webcg/assets/fonts/Bender-Bold.ttf') format('truetype'),
+        url('http://10.0.1.6/webcg/assets/fonts/Bender-Bold.svg#Bender-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('http://10.0.1.6/webcg/assets/fonts/Comfortaa-Regular.eot');
+    src: url('http://10.0.1.6/webcg/assets/fonts/Comfortaa-Regular.eot?#iefix') format('embedded-opentype'),
+        url('http://10.0.1.6/webcg/assets/fonts/Comfortaa-Regular.woff2') format('woff2'),
+        url('http://10.0.1.6/webcg/assets/fonts/Comfortaa-Regular.woff') format('woff'),
+        url('http://10.0.1.6/webcg/assets/fonts/Comfortaa-Regular.ttf') format('truetype'),
+        url('http://10.0.1.6/webcg/assets/fonts/Comfortaa-Regular.svg#Comfortaa-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('http://10.0.1.6/webcg/assets/fonts/Comfortaa-Bold.eot');
+    src: url('http://10.0.1.6/webcg/assets/fonts/Comfortaa-Bold.eot?#iefix') format('embedded-opentype'),
+        url('http://10.0.1.6/webcg/assets/fonts/Comfortaa-Bold.woff2') format('woff2'),
+        url('http://10.0.1.6/webcg/assets/fonts/Comfortaa-Bold.woff') format('woff'),
+        url('http://10.0.1.6/webcg/assets/fonts/Comfortaa-Bold.ttf') format('truetype'),
+        url('http://10.0.1.6/webcg/assets/fonts/Comfortaa-Bold.svg#Comfortaa-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+#lowerthird{
+	position:absolute;
+	bottom: 80px;
+	width:100%;
+	text-align: left;
+font-family: 'Uni Sans';
+
+   
+   
+}			
+#bg{
+	/*background-color: rgba(255, 255, 255, 0.9);*/
+	color: #444444;
+	padding: 4px 10px 4px 330px;
+	text-align: left;
+	font-size: 50px;
+	text-transform: uppercase;
+	height:125px;
+	
+      background: rgba(255,255,255,0.9);
+background: -moz-linear-gradient(left, rgba(255,255,255,0.9) 30%, rgba(0,0,0,0.0) 60%);
+background: -webkit-linear-gradient(left, rgba(255,255,255,0.9) 30%, rgba(0,0,0,0.0) 60%);
+background: linear-gradient(to right, rgba(255,255,255,0.9) 30%, rgba(0,0,0,0.0) 60%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255,255,255,0.9)', endColorstr='rgba(0,0,0,0.0)',GradientType=1 );
+                                                          
+}	
+#f1{	
+    font-family: 'Bender';
+    
+}
+#f0{
+
+	font-family: 'Bender';
+	font-weight: bold;
+}
+#clock{
+	background:#9A0D02;
+	color:#FFFFFF;
+	text-transform:uppercase;
+	width:511px;
+	text-align:right;
+	padding:5px 10px 0px 50px;
+	font-size:20px;
+	font-weight:bold;
+	height:32px;
+}
+#ticker{
+    width:100%;
+	background:#222;
+	color:#fff;
+	text-transform:uppercase;
+	text-align:left;
+	padding: 5px 10px 5px 334px;
+	font-size:20px;
+	height:32px;
+	overflow:hidden;
+}
+#ticker div {
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+
+
+
+
+/* ----------------------*/
+
+
+
+
+
+/*base code*/
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+-webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated2 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+-webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+}
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+
+}
+/*the animation definition*/
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp
+
+}
+
+
+/*the animation definition*/
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+  }
+}
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown
+
+}
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+  }
+}
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft
+}
+
+		
+		</style>
+    </head>	
+	<body>
+		 <div id="lowerthird" class="fadeInLeft animated">
+    <div id="bg">
+    	<div id="f0" class="fadeInDown animated2" placeholder="Main Title">Alexey</div>
+    	<div id="f1" class="fadeInUp animated2" placeholder="Secondary Title">Balakirev</div>
+    </div>
+    <div id="ticker">
+        <strong>Latest News:</strong>
+        <ul>
+            <li>Kakaya-to ocherednaya novost i mnogo-mnogo texta</li>
+            <li>Delta flights grounded after systems outage.</li>
+            <li>Prince's estate denies planning to sell his Paisley Park home.</li>
+        </ul>
+    </div>
+    <div id="clock">
+        Ukraine <span id="time-part"></span>
+    </div>
+</div>
+ 		
+		<!-- JQquery -->
+		<script src="http://10.0.1.6/webcg/assets/jquery-2.1.4.min.js"></script>
+		
+				<script>			
+			// Update dynamic fields if a change is detected.
+			function DynamicFields(f0, f0_value, f1, f1_value) {
+			  				$('#f0').html(unescape(f0_value));
+								$('#f1').html(unescape(f1_value));
+							}			
+		</script>		
+				
+		
+		<script src="http://10.0.1.6/webcg/layers-assets/newscg/moment.js"></script>
+<script src="http://10.0.1.6/webcg/layers-assets/newscg/jquery.ticker.min.js"></script>
+<script>
+$(document).ready(function() {
+	var interval = setInterval(function() {
+		var momentNow = moment();
+		$("#time-part").html(momentNow.format("mm:ss"));
+	}, 100);
+});
+
+$("#ticker").ticker();
+</script>		
+	</body>
+</html>

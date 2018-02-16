@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Preview: NewsCG1</title>
+        <title>Preview: NewsCG5</title>
 		
 		<meta charset="utf-8">
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
@@ -24,7 +24,8 @@
 				overflow: hidden;
 				-webkit-font-smoothing: antialiased !important;
 			}
-			#lowerthird{
+			@import "assets/animate.css";
+#lowerthird{
 	position:absolute;
 	bottom: 80px;
 	width:100%;
@@ -42,6 +43,7 @@
 }			
 #f0{
 	font-weight: bold;
+	
 }
 #clock{
 	background:#9A0D02;
@@ -49,7 +51,7 @@
 	text-transform:uppercase;
 	width:511px;
 	text-align:right;
-	padding:5px 10px;
+	padding:5px 10px 0px 50px;
 	font-size:20px;
 	font-weight:bold;
 	height:32px;
@@ -68,14 +70,26 @@
 #ticker div {
     display: inline-block;
     word-wrap: break-word;
-}		
+}
+
+.animated2 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+-webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+		
 		</style>
     </head>	
 	<body>
-		 <div id="lowerthird">
+		 
+<div id="lowerthird" class="fadeInLeft animated">
     <div id="bg">
-    	<div id="f0" placeholder="Main Title">Main Title</div>
-    	<div id="f1" placeholder="Secondary Title">Secondary title</div>
+    	<div id="f0" class="fadeInDown animated2" placeholder="Main Title">Alexey</div>
+    	<div id="f1" class="fadeInUp animated2" placeholder="Secondary Title">Balakirev</div>
     </div>
     <div id="ticker">
         <strong>Latest News:</strong>
